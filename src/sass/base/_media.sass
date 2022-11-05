@@ -1,4 +1,4 @@
-@media ( max-width: 992px )
+@media (max-width: 991px)
 	.container
 		max-width: 720px
 	.benefits
@@ -9,6 +9,16 @@
 	.catalog
 			&__content
 				justify-content: space-around
+	.carousel
+		&__inner
+			width: 700px
+		.tns-item
+			img
+				max-width: 450px
+	.prev
+		left: -20px
+	.next
+		right: -20px
 @media (max-width: 767px)
 	.container
 		max-width: 540px
@@ -37,13 +47,34 @@
 		&__descr
 			font-size: 24px
 			margin-top: 60px
-	.catalog-item
-			width: 268px
-			padding: 15px
+	.prev, .next
+		display: none
+	.carousel
+		.tns-item
+			img
+				max-width: 500px
+	.catalog	
+		&__content
+			justify-content: space-around
+		&-item
+			width: 40%
+			padding: 10px
+			min-height: 400px
 			margin-bottom: 15px
 			&__list
-				li
-					margin-bottom: 10px
+				&_active
+					padding-right: 10px
+					padding-left: 10px
+			&__subscr
+				margin-bottom: 10px
+				font-size: 13px
+				line-height: 20px
+			&__content
+				margin-right: 5px
+				// &_active
+			&__price
+				font-size: 18px
+				
 	.button
 		&_mini
 			width: 120px
@@ -55,7 +86,7 @@
 				margin-right: 30px
 				width: 150px
 
-@media ( max-width:  576px)
+@media (max-width:  575px)
 	.container
 		max-width: 300px
 	.header
@@ -98,6 +129,12 @@
 			text-align: center
 			font-size: 19px
 			margin-top: 60px
+	.carousel
+		.tns-item
+			img
+				max-width: 300px
+	.prev, .next
+		display: none
 	.catalog
 		&__tabs
 			flex-direction: column
@@ -112,7 +149,6 @@
 		&-item
 			flex-direction: column
 			margin-bottom: 20px
-			border-bottom: 2px $main-color solid
 			padding-bottom: 15px
 			&__photo
 				display: block
@@ -121,7 +157,49 @@
 			&__text
 				text-align: center
 				margin-top: 20px
-
-
-
-	
+	.footer
+		&__info
+			width: 100%
+			height: 200px
+		&__map
+			width: 100%
+			height: 300px
+		&__address
+			margin-top: 30px
+			margin-bottom: 20px
+			font-size: 18px
+		&__phone
+			&:hover
+				text-decoration: none
+		&__social
+			margin-top: 20px
+	.modal
+		width: 70vw
+		min-height: 70vh
+		min-height: 280px
+		padding: 15px 10px 15px 10px
+		&__subtitle
+			font-size: 14px
+		&__close
+			font-size: 25px
+			right: 8px
+			line-height: 25px
+	.feed-form
+		&_mini
+			width: 65vw
+			margin-top: 5px
+			margin-bottom: 10px
+			align-items: center
+			input
+				padding: 0 5px
+				width: 100%
+				height: 40px
+				margin-bottom: 10px
+		.button
+			width: 100%
+			height: 40px
+			font-size: 10px
+			margin: 0 auto
+		label.error
+			font-size: 10px
+			margin-bottom: 10px
